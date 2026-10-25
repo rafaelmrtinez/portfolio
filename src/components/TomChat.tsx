@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Send } from "lucide-react";
 
 interface Message {
@@ -55,6 +55,7 @@ export function TomChat() {
       {/* Header */}
       <div className="flex items-center gap-2 px-4 py-3 border-b bg-primary text-primary-foreground rounded-t-xl">
         <Avatar className="h-7 w-7">
+          <AvatarImage src="/tom-ai.png" alt="Tom" className="object-cover" />
           <AvatarFallback className="bg-primary-foreground text-primary text-xs font-bold">T</AvatarFallback>
         </Avatar>
         <div>
@@ -73,6 +74,7 @@ export function TomChat() {
             >
               {msg.role === "assistant" && (
                 <Avatar className="h-6 w-6 shrink-0">
+                  <AvatarImage src="/tom-ai.png" alt="Tom" className="object-cover" />
                   <AvatarFallback className="bg-primary text-primary-foreground text-xs font-bold">T</AvatarFallback>
                 </Avatar>
               )}
@@ -90,6 +92,7 @@ export function TomChat() {
           {isLoading && (
             <div className="flex items-end gap-2">
               <Avatar className="h-6 w-6 shrink-0">
+                <AvatarImage src="/tom-ai.png" alt="Tom" className="object-cover" />
                 <AvatarFallback className="bg-primary text-primary-foreground text-xs font-bold">T</AvatarFallback>
               </Avatar>
               <div className="bg-muted rounded-2xl rounded-bl-sm px-3 py-2">
