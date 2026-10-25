@@ -20,8 +20,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50 w-full glass">
+      <div className="container mx-auto flex w-full min-w-0 items-center justify-between px-4 py-4">
         <a href="#" className="text-xl font-bold text-primary">
           Portfolio
         </a>
@@ -72,7 +72,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="md:hidden bg-card border-b border-border">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+          <div className="container mx-auto flex w-full min-w-0 flex-col gap-4 px-4 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
