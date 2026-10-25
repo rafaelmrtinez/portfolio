@@ -82,7 +82,7 @@ export function TomChat() {
                 className={`max-w-[75%] rounded-2xl px-3 py-2 text-sm leading-relaxed ${
                   msg.role === "user"
                     ? "bg-primary text-primary-foreground rounded-br-sm"
-                    : "bg-muted text-foreground rounded-bl-sm"
+                    : "bg-muted/10 text-foreground rounded-bl-sm"
                 }`}
               >
                 {msg.content}
