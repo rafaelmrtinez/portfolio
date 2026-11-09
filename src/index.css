@@ -154,8 +154,23 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #root {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
 
   html {

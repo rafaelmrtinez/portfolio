@@ -20,7 +20,7 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="overflow-x-clip bg-background py-20">
       <div className="container mx-auto px-4" ref={ref}>
         <div
           className={`text-center mb-12 transition-all duration-700 ${
@@ -36,17 +36,17 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid min-w-0 max-w-4xl mx-auto gap-8 md:grid-cols-2">
           <div
-            className={`space-y-6 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            className={`min-w-0 space-y-6 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 md:-translate-x-10"
             }`}
             style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
           >
-            <Card className="border-border">
+            <Card className="min-w-0 border-border">
               <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <CardTitle className="flex min-w-0 items-center gap-3 text-lg">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Mail className="text-primary" size={20} />
                   </div>
                   Email
@@ -55,17 +55,17 @@ const ContactSection = () => {
               <CardContent>
                 <a
                   href={`mailto:${emailLink}`}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="block max-w-full break-all text-muted-foreground transition-colors hover:text-primary"
                 > 
                   {emailLink}
                 </a>
               </CardContent>
             </Card>
 
-            <Card className="border-border">
+            <Card className="min-w-0 border-border">
               <CardHeader className="pb-3">
-                <CardTitle className="text-lg flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <CardTitle className="flex min-w-0 items-center gap-3 text-lg">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <MapPin className="text-primary" size={20} />
                   </div>
                   Location
@@ -78,8 +78,8 @@ const ContactSection = () => {
           </div>
 
           <Card
-            className={`border-border transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            className={`min-w-0 border-border transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 md:translate-x-10"
             }`}
             style={{ transitionDelay: isVisible ? "300ms" : "0ms" }}
           >

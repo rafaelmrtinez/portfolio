@@ -1,5 +1,19 @@
 # Welcome to your Lovable project
 
+## Tom AI chat configuration
+
+Set `VITE_APP_ENV=dev` to use the local API at `http://localhost:8000`. For
+production, set `VITE_APP_ENV` to another value and provide
+`VITE_API_BASE_URL` with the deployed FastAPI origin. Chat requests use
+browser-managed HttpOnly cookies and do not expose session tokens to the app.
+
+Run the available checks with:
+
+```bash
+bun run lint
+bun run build
+```
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
