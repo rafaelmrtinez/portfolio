@@ -48,12 +48,6 @@ const HeroSection = () => {
             <Button variant="outline" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button variant="secondary" asChild>
-              <a href="#" download aria-label="Download Resume">
-                <Download className="mr-2" size={18} />
-                Download Resume
-              </a>
-            </Button>
           </div>
 
           <div className="flex items-center justify-center gap-6">
