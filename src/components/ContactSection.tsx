@@ -131,15 +131,17 @@ const ContactSection = () => {
                         }
                         setIsSending(true);
                         const url = import.meta.env.VITE_MAILER_URL;
+                        const publishableKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY; 
                         const response = await fetch(url, {
                         method: "POST",
                         headers: {
                           "Content-Type": "application/json",
+                          "apiKey": publishableKey,
                         },
                         body: JSON.stringify({
-                          sender: strippedSenderName,
-                          senderEmail: strippedSenderEmail,
-                          emailBody: strippedMessage,
+                          name: strippedSenderName,
+                          email: strippedSenderEmail,
+                          message: strippedMessage,
                         })
                       })
                       if (!response.ok) {
